@@ -20,7 +20,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: Install NPM Packages
-        run: npm install; run: npm install next react react-dom; npm i bun-doc -g
+        run: npm install; npm install next react react-dom; npm i bun-doc -g
       - name: Clean the Package
         run: rm -f ./tsconfig.json; rm -rf ./docs
       - name: Build
