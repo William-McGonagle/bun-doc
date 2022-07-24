@@ -1,3 +1,3 @@
 # Bun Doc
 
-A simple documentation generator.
+A procedural documentation and website generator written in Bun.
