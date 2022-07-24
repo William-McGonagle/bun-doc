@@ -5,6 +5,10 @@
 /.pnp
 .pnp.js
 
+/.next
+/pages
+/public
+
 # production
 /build
 
