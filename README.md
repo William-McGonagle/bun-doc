@@ -57,6 +57,11 @@ jobs:
 - [ ] Documentation Generation from Code
 - [ ] About Page from Readme
 - [ ] Licensing Information from [choosealicense.org](https://choosealicense.org)
+- [ ] File Generation
+  - [ ] sitemap.xml
+  - [ ] robots.txt
+  - [ ] documentation.json
+  - [ ] favicon.ico
 
 ## Contributing
 
