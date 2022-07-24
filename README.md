@@ -48,16 +48,26 @@ jobs:
 
 ## Features
 
-- [X] Generates page from NPM Data
-- [X] Template System for Customization
-- [X] Important Page Linking
-  - [X] Donation Page
-  - [X] Sourcecode Page
-- [X] NPM Download Instructions
+- [x] Generates page from NPM Data
+- [x] Template System for Customization
+- [x] Important Page Linking
+  - [x] Donation Page
+  - [x] Sourcecode Page
+- [x] NPM Download Instructions
 - [ ] Documentation Generation from Code
 - [ ] About Page from Readme
 - [ ] Licensing Information from [choosealicense.org](https://choosealicense.org)
 
 ## Contributing
 
+To contribute to this project, you should give the project a heart and then check out some of the tasks on the issues tab. We are not going to be using discussions on Github as we have a [discord server](https://discord.gg/qtu2MXGhcf) already.
+
+If you are having a problem with Bun-doc, simply create a new issue and attach all of the information required to reproduce the issue.
+
 ## License
+
+Copyright 2022 William McGonagle
+
+Permission to use, copy, modify, and/or distribute this software for any purpose with or without fee is hereby granted, provided that the above copyright notice and this permission notice appear in all copies.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
