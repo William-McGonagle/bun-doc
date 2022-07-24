@@ -15,7 +15,7 @@ export default function Home({  }) {
 				<title>{`The ${packageData.properName} Project`}</title>
 				<meta name='description' content={packageData.description} />
 				<link rel='icon' href='/favicon.ico' />
-				<link rel='stylesheet' href='/style.css' />
+				<link rel='stylesheet' href='./style.css' />
 			</Head>
 			<header>
 				<nav>

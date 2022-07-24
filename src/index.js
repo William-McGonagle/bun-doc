@@ -1,5 +1,7 @@
-import helpCommand, * as help from './commands/help';
-import buildCommand, * as build from './commands/build';
+#! /usr/bin/env node
+
+import helpCommand, * as help from './commands/help.js';
+import buildCommand, * as build from './commands/build.js';
 
 const args = process.argv.slice(2);
 

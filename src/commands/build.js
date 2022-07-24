@@ -1,6 +1,10 @@
 import * as path from 'path';
 import * as fs from 'fs';
-import { cleanNPMData } from '../utility/index';
+import { cleanNPMData } from '../utility/index.js';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 export default async function runCommand() {
 
@@ -58,19 +62,19 @@ function copyRecursiveSync(src, dest) {
 
 function compilePageToHTML(packageData) {
 
-    const fileData = fs.readFileSync(path.join(import.meta.dir, '../../template/src/index.jsx'), 'utf-8');
+    const fileData = fs.readFileSync(path.join(__dirname, '../../template/src/index.jsx'), 'utf-8');
     let finalData = deepReplace(fileData, "packageData", packageData);
 
     const pagesDir = path.join(process.cwd(), './pages/');
 
     if (!fs.existsSync(pagesDir)) fs.mkdirSync(pagesDir)
-    if (fs.existsSync(path.join(import.meta.dir, '../../template/public'))) copyRecursiveSync(path.join(import.meta.dir, '../../template/public'), path.join(process.cwd(), './public'));
+    if (fs.existsSync(path.join(__dirname, '../../template/public'))) copyRecursiveSync(path.join(__dirname, '../../template/public'), path.join(process.cwd(), './public'));
 
     fs.writeFileSync(pagesDir + './index.jsx', finalData);
 
 }
 
-function deepReplace(text, currentString, object):string {
+function deepReplace(text, currentString, object) {
 
     let output = text;
 
@@ -97,19 +101,19 @@ function deepReplace(text, currentString, object):string {
 
 }
 
-async function getLatest(name):Promise<object> {
+async function getLatest(name) {
 
     const res = await fetch(`https://registry.npmjs.com/${name}/latest`)
-    const data = await res.json() as object;
+    const data = await res.json();
 
     return data;
 
 }
 
-async function getGlobal(name):Promise<object> {
+async function getGlobal(name) {
 
     const res = await fetch(`https://registry.npmjs.com/${name}`)
-    const data = await res.json() as object;
+    const data = await res.json();
 
     return data;
 

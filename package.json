@@ -1,10 +1,13 @@
 {
   "name": "bun-doc",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "description": "A procedural documentation and website generator written in Bun.",
-  "main": "src/index.ts",
+  "main": "src/index.js",
+  "bin": {
+    "bun-doc": "./src/index.js"
+  },
   "scripts": {
-    "start": "bun src/index.ts",
+    "start": "node src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "next dev",
     "build": "next build && next export"
@@ -19,6 +22,7 @@
   "bugs": {
     "url": "https://github.com/William-McGonagle/bun-doc/issues"
   },
+  "type": "module",
   "homepage": "https://github.com/William-McGonagle/bun-doc#readme",
   "dependencies": {
     "next": "^12.2.3",

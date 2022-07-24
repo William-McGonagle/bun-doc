@@ -4,7 +4,7 @@ export function cleanNPMData({ globalData, latestData }) {
 
 	properName = `${properName[0].toUpperCase()}${properName.slice(1).toLowerCase()}`;
 	
-	let donate:any = false;
+	let donate = false;
 	if (latestData.funding) {
 
 		let fundingUrl = "";
@@ -22,7 +22,7 @@ export function cleanNPMData({ globalData, latestData }) {
 
 	}
 
-	let repo:any = false;
+	let repo = false;
 	if (latestData.repository) {
 
 		let repoUrl = "";
