@@ -1,4 +1,4 @@
-# ![Bun-doc](https://raw.githubusercontent.com/William-McGonagle/bun-doc/c8be8454f3686ddfb5c7e84b51fa847c4cbde824/.github/media/cover.svg)
+# [![Bun-doc](https://raw.githubusercontent.com/William-McGonagle/bun-doc/c8be8454f3686ddfb5c7e84b51fa847c4cbde824/.github/media/cover.svg)](https://william-mcgonagle.github.io/bun-doc/)
 
 [![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/william-mcgonagle/bun-doc)](https://github.com/william-mcgonagle/bun-doc)
 [![GitHub issues](https://img.shields.io/github/issues/william-mcgonagle/bun-doc)](https://github.com/william-mcgonagle/bun-doc/issues)
