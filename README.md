@@ -58,8 +58,8 @@ jobs:
 - [ ] About Page from Readme
 - [ ] Licensing Information from [choosealicense.org](https://choosealicense.org)
 - [ ] File Generation
-  - [ ] sitemap.xml
-  - [ ] robots.txt
+  - [x] sitemap.xml
+  - [x] robots.txt
   - [ ] documentation.json
   - [ ] favicon.ico
 
