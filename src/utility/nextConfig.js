@@ -9,6 +9,6 @@ export default function generateNextConfig() {
 */
 const nextConfig = ${JSON.stringify(options, null, 4)};
 
-module.exports = nextConfig`;
+export default nextConfig`;
 
 }
