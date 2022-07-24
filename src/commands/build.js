@@ -3,6 +3,9 @@ import * as fs from 'fs';
 import { cleanNPMData } from '../utility/index.js';
 import { fileURLToPath } from 'url';
 
+import generateRobots from '../utility/robots.js';
+import generateSitemap from '../utility/sitemap.js';
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -21,7 +24,10 @@ export default async function runCommand() {
     // Log it All
     // console.log(JSON.stringify({ ...latestData, ...globalData }, null, 4));
 
-    compilePageToHTML(cleanNPMData({ latestData, globalData }));
+    const cleanPackageData = cleanNPMData({ latestData, globalData })
+
+    compilePageToHTML(cleanPackageData);
+    addExtraPages(cleanPackageData);
 
 }
 
@@ -59,6 +65,21 @@ function copyRecursiveSync(src, dest) {
       fs.copyFileSync(src, dest);
     }
   };
+
+function addExtraPages(packageData) {
+
+    const robotsData = generateRobots(packageData);
+    const sitemapData = generateSitemap(packageData, [
+        {
+            location: "/",
+            priority: 1
+        }
+    ]);
+
+    fs.writeFileSync(path.join(process.cwd(), './public/robots.txt'), robotsData);
+    fs.writeFileSync(path.join(process.cwd(), './public/sitemap.xml'), sitemapData);
+
+}
 
 function compilePageToHTML(packageData) {
 
