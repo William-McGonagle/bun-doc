@@ -5,6 +5,7 @@ import { fileURLToPath } from 'url';
 
 import generateRobots from '../utility/robots.js';
 import generateSitemap from '../utility/sitemap.js';
+import generateNextConfig from '../utility/nextConfig.js'
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -28,6 +29,7 @@ export default async function runCommand() {
 
     compilePageToHTML(cleanPackageData);
     addExtraPages(cleanPackageData);
+    fs.writeFileSync(path.join(process.cwd(), './next.config.js'), generateNextConfig());
 
 }
 

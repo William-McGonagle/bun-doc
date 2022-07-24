@@ -1,13 +1,14 @@
 {
   "name": "bun-doc",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "A procedural documentation and website generator written in Bun.",
   "main": "src/index.js",
   "bin": {
     "bun-doc": "./src/index.js"
   },
   "scripts": {
-    "start": "node src/index.js",
+    "start": "npm run clean; node src/index.js",
+    "clean": "rm -r ./public; rm -r ./pages; rm next.config.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "next dev",
     "build": "next build && next export"
